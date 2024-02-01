@@ -1,2 +1,2 @@
 THIS WEBSITE/REPSITORY IS HEAVELY BACED ON 3KH0 BUT I AM DOING BY BEST TO MAKE IT MY OWN
-link is https://medrokian.github.io/index.html
+link is https://medrokian-v2.github.io/index.html
