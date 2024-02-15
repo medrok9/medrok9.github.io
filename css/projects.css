@@ -4,7 +4,7 @@ body {
   font-size: "25px";
   color: #ffffff;
   text-align: left;
-  background-color: #021cbf;
+  background-color: #055499;
   background-repeat: no-repeat;
   background-size: cover;
 }    color: white;
@@ -16,7 +16,7 @@ body {
  }
 
 .console-button:hover {
-   background-color: #021CBF; /* Slightly lighter blue on hover */
+   background-color: #055499; /* Slightly lighter blue on hover */
 }
 
 .credit, button {
@@ -27,7 +27,7 @@ button {
   background-color: #000D7E; /* Darker blue for the "What is this?" button */
     }
  button:hover {
-  background-color: #021CBF; /* Slightly lighter blue on hover for the "What is this?" button */
+  background-color: #055499; /* Slightly lighter blue on hover for the "What is this?" button */
 }
 a {
   text-decoration: none;
