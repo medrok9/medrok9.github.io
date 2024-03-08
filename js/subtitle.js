@@ -272,6 +272,20 @@ say[273] = "i hope you step on a lego";
 say[274] = "i hope you step on a d4";
 say[275] = "i hope your phone dies";
 say[276] = "this broadcast is brought to you by the color green";
+say[277] = "I believe i can fly"
+say[278] = "Remember me i'm that guy from high-school"
+say[279] = "Now with cat food"
+say[280] = "Now with dog food"
+say[281] = "Now without human food"
+say[282] = "Now without human food"
+say[283] = "Your grandpa smashed your grandma"
+say[284] = "Your dad smashed your mom"
+say[285] = "Powered by whoppers"
+say[286] = "Will smith"
+say[287] = "1+1=11"
+say[287] = "Powered by two ply toilet paper"
+say[288] = "I love club penguin"
+say[289] = "dont microwave cup noodles"
 // pick a random greeting
 var howmany = say.length;
 var bRand = 0;
