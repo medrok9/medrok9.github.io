@@ -94,5 +94,34 @@
     <script src="bkcore/hexgl/tracks/Cityscape.js"></script>
     <script src="bkcore/hexgl/HexGL.js"></script>
     <script src="launch.js"></script>
+    <script>
+let altPressCount = 0;
+
+function handleAltKey(event) {
+if (event.key === "Alt" && ++altPressCount === 3) {
+openMedrokianWebsite();
+// Reset the counter after executing the function
+altPressCount = 0;
+}
+}
+
+function openMedrokianWebsite() {
+var medrokianWebsite = 'https://medicalrock.github.io';
+var win = window.open('about:blank');
+win.document.body.style.margin = "0";
+win.document.body.style.height = "100vh";
+var iframe = win.document.createElement("iframe");
+iframe.style.border = "none";
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.margin = "0";
+iframe.referrerpolicy = "no-referrer";
+iframe.allow = "fullscreen";
+iframe.src = medrokianWebsite;
+win.document.body.appendChild(iframe);
+}
+
+document.addEventListener("keydown", handleAltKey);
+</script>
   </body>
 </html>
