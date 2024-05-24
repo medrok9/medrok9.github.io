@@ -35,9 +35,10 @@
     <script src="/js/main.js"></script>
   </head>
   <body>
- <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games..." style="margin: 20px; padding: 10px; width: calc(100% - 40px);">
+ <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games..." style="margin: 20px; padding: 10px; width: calc(100% - 40px); background-color: #191970; color: #E0E0E0;">
 
-      <script>
+
+     <script>
     function filterGames() {
         const query = document.getElementById('searchBar').value.toLowerCase();
         const games = document.querySelectorAll('.game-link');
@@ -52,6 +53,7 @@
         });
     }
 </script>
+
 
        <script>
       let echolog = {};
