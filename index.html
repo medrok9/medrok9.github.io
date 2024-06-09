@@ -17,6 +17,15 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <style>
+        .no-url a {
+            pointer-events: none;
+        }
+        .no-url a:after {
+            content: attr(data-href);
+            pointer-events: all;
+        }
+    </style>
      <script>
         document.querySelectorAll('.no-url a').forEach(function(link) {
             link.addEventListener('mouseover', function(event) {
