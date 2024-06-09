@@ -14,6 +14,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
+     <script>
+        document.querySelectorAll('.no-url a').forEach(function(link) {
+            link.addEventListener('mouseover', function(event) {
+                event.preventDefault();
+            });
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = link.getAttribute('data-href');
+            });
+        });
+    </script>
     <h1 id="title">
       (redacted)<br />
       <span id="subtitle">...</span>
