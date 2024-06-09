@@ -49,7 +49,15 @@
  <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
-
+<style>
+        .no-url a {
+            pointer-events: none;
+        }
+        .no-url a:after {
+            content: attr(data-href);
+            pointer-events: all;
+        }
+    </style>
      <script>
     function filterGames() {
         const query = document.getElementById('searchBar').value.toLowerCase();
