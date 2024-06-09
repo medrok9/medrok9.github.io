@@ -35,7 +35,17 @@
     <script src="/js/main.js"></script>
   </head>
   <body>
-
+   <script>
+        document.querySelectorAll('.no-url a').forEach(function(link) {
+            link.addEventListener('mouseover', function(event) {
+                event.preventDefault();
+            });
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = link.getAttribute('data-href');
+            });
+        });
+    </script>
  <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
