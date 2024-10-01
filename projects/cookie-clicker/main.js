@@ -4102,7 +4102,7 @@ Game.Launch=function()
 			if (Game.OnAscend || Game.AscendTimer>0 || Game.T<3 || now-Game.lastClick<1000/250) {}
 			else
 			{
-				if (now-Game.lastClick<1000/15)
+				i (now-Game.lastClick<1000/15)
 				{
 					Game.autoclickerDetected+=Game.fps;
 					if (Game.autoclickerDetected>=Game.fps*5) Game.Win('Uncanny clicker');
