@@ -83,17 +83,17 @@
     </style>
     <script>
         function filterGames() {
-            const query = document.getElementById('searchBar').value.toLowerCase();
-            const games = document.querySelectorAll('.game-link');
-            games.forEach(game => {
-                const title = game.querySelector('.game-title').innerText.toLowerCase();
-                if (title.includes(query)) {
-                    game.style.display = 'block';
-                } else {
-                    game.style.display = 'none';
-                }
-            });
+    const query = document.getElementById('searchBar').value.toLowerCase();
+    const games = document.querySelectorAll('.game-link');
+    
+    games.forEach(game => {
+        const titleElement = game.querySelector('.game-title');
+        if (titleElement) {
+            const title = titleElement.innerText.toLowerCase();
+            game.style.display = title.includes(query) ? 'block' : 'none';
         }
+    });
+}
     </script>
     <script>
         let echolog = {};
@@ -155,7 +155,7 @@
     <h1 class="text-center">Projects</h1>
     <p class="text-center">Here is the full list of games on this site, play some of your favorites or find a new one!</p>
     <div class="flex-container">
-        <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games..." style="margin: 20px; padding: 10px; width: calc(100% - 40px); background-color: #191970; color: #ffffff;">    
+        <input type="text" id="searchBar" onkeyup="filterGames()" placeholder="Search for games..." style="margin: 20px; padding: 10px; width: calc(100% - 40px); background-color: #191970; color: #ffffff;">
 
        <a class="dynamic-link" data-href="projects/suggestions/index.html">
   <div class="game-tile">
