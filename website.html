@@ -84,10 +84,10 @@
     <script>
         function filterGames() {
     const query = document.getElementById('searchBar').value.toLowerCase();
-    const games = document.querySelectorAll('.game-link');
+    const games = document.querySelectorAll('game-link');
     
     games.forEach(game => {
-        const titleElement = game.querySelector('.game-title');
+        const titleElement = game.querySelector('game-title');
         if (titleElement) {
             const title = titleElement.innerText.toLowerCase();
             game.style.display = title.includes(query) ? 'block' : 'none';
