@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
     <title>(redacted)</title>
@@ -12,18 +12,6 @@
     <meta name="author" content="site" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-     <script>
-        document.querySelectorAll('.no-drag').forEach(function(link) {
-            link.addEventListener('dragstart', function(event) {
-                event.preventDefault();
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
     <style>
         .no-url a {
             pointer-events: none;
@@ -33,11 +21,21 @@
             pointer-events: all;
         }
     </style>
-     <script>
-        document.querySelectorAll('.no-url a').forEach(function(link) {
-            link.addEventListener('mouseover', function(event) {
+</head>
+<body>
+    <script>
+        // Prevent default drag behavior
+        document.querySelectorAll('.no-drag').forEach(function(link) {
+            link.addEventListener('dragstart', function(event) {
                 event.preventDefault();
             });
+        });
+
+        // Prevent right-click context menu
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Handle link clicks without displaying the URL
+        document.querySelectorAll('.no-url a').forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
                 window.location.href = link.getAttribute('data-href');
@@ -45,58 +43,57 @@
         });
     </script>
     <h1 id="title">
-      (redacted)<br />
-      <span id="subtitle">...</span>
+        (redacted)<br />
+        <span id="subtitle">...</span>
     </h1>
-    <p class="text-center"><a href="/website.html"><button id="gs">Get Started</button></a></p>
+    <p class="text-center"><button id="gs" onclick="window.location='/website.html';">Get Started</button></p>
     <p id="intro" class="text-center">
-      Welcome to (redacted), your best option for unblocked games on the internet.<br />
-      But dont just take that from me, take it from the people who use this site!
+        Welcome to (redacted), your best option for unblocked games on the internet.<br />
+        But don't just take that from me, take it from the people who use this site!
     </p>
+
     <!-- Start Review section -->
     <div class="flex-container">
-      <div class="card-wrapper">
-        <div class="card text-center">
-          <img class="card-img-top" src="/img/reviews/NotJumbled86.webp" alt="NotJumbled86" />
-          <div class="card-body">
-            <h3>NotJumbled86</h3>
-            <p class="card-text">
-              10/10 Site, it is easy to use and has a lot of features. When it gets blocked, you can just deploy your own copy of the site!
-            </p>
-          </div>
+        <div class="card-wrapper">
+            <div class="card text-center">
+                <img class="card-img-top" src="/img/reviews/NotJumbled86.webp" alt="NotJumbled86" />
+                <div class="card-body">
+                    <h3>NotJumbled86</h3>
+                    <p class="card-text">
+                        10/10 Site, it is easy to use and has a lot of features. When it gets blocked, you can just deploy your own copy of the site!
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="card-wrapper">
-        <div class="card text-center">
-          <img class="card-img-top" src="/img/reviews/Piplup7575.webp" alt="Piplup7575" />
-          <div class="card-body">
-            <h3>Piplup7575</h3>
-            <p class="card-text">10/10 would meme again. i am totally not one of the people working on the site...</p>
-          </div>
+        <div class="card-wrapper">
+            <div class="card text-center">
+                <img class="card-img-top" src="/img/reviews/Piplup7575.webp" alt="Piplup7575" />
+                <div class="card-body">
+                    <h3>Piplup7575</h3>
+                    <p class="card-text">10/10 would meme again. I am totally not one of the people working on the site...</p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="card-wrapper">
-        <div class="card text-center">
-          <img class="card-img-top" src="/img/reviews/DreamXD.webp" alt="DreamXD" />
-          <div class="card-body">
-            <h3>DreamXD</h3>
-            <p class="card-text">amazing site, i play on it everyday, super fun games and the site looks fire. it never gets blocked for me. the site is just good, everyone at my school plays it</p>
-          </div>
+        <div class="card-wrapper">
+            <div class="card text-center">
+                <img class="card-img-top" src="/img/reviews/DreamXD.webp" alt="DreamXD" />
+                <div class="card-body">
+                    <h3>DreamXD</h3>
+                    <p class="card-text">Amazing site, I play on it every day. Super fun games and the site looks fire. It never gets blocked for me. Everyone at my school plays it.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <!-- End Review section -->
     <p class="text-center">
-      What are you waiting for? Go find your next favorite game <a href="/projects.html">in our wide list of games</a>. Or you can view the <a href="/dump/changelog.txt">changelog here</a>!
-
+        What are you waiting for? Go find your next favorite game <a class="no-url" data-href="/projects.html">in our wide list of games</a>. Or you can view the <a class="no-url" data-href="/dump/changelog.txt">changelog here</a>!
+    </p>
     <p class="text-center">© site, 2023. Unauthorized use and/or duplication of this material without permission from (redacted) is strictly prohibited. Please contact me at (redacted).</p>
     <script src="/js/main.js"></script>
     <script src="/js/subtitle.js"></script>
     <footer>
-      <link rel="stylesheet" type="text/css" href="css/cookiepopup.css" async />
-      <script src="js/cookiepopup.js" async></script>
+        <link rel="stylesheet" type="text/css" href="css/cookiepopup.css" async />
+        <script src="js/cookiepopup.js" async></script>
     </footer>
-  </body>
+</body>
 </html>
