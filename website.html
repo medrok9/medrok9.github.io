@@ -67,10 +67,9 @@
                 // Open about:blank in a new window
                 var newWindow = window.open(); 
                 
-                // Inject HTML content into the about:blank page
+                // Inject HTML content into the about:blank page with the iframe
                 newWindow.document.write('<!DOCTYPE html><html><head><title>Blank Page</title></head><body>');
-                newWindow.document.write('<h1>You can add HTML content dynamically!</h1>');
-                newWindow.document.write('<iframe src="' + link.getAttribute('data-href') + '" style="width:100%; height:100%; border:none;"></iframe>');
+                newWindow.document.write('<iframe src="' + link.getAttribute('data-href') + '" style="width:100vw; height:100vh; border:none;"></iframe>');
                 newWindow.document.write('</body></html>');
                 
                 // Close the document stream to render the content
@@ -79,6 +78,7 @@
         });
     });
 </script>
+
 
 
     <script>
